@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JetpackComposeSample</string>
+    <string name="banner">banner image</string>
+    <string name="article">article image</string>
+</resources>
