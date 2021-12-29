@@ -18,6 +18,7 @@
       "matchStrings": [
         "(?<depName>[a-z.-]*:[a-z-]*):(?<currentValue>\d+.\d+[.\d]*)"
       ],
+      "datasourceTemplate": "maven",
       "versioningTemplate": "gradle"
       }
     ]
