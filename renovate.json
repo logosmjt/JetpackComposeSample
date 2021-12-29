@@ -1,5 +1,13 @@
 {
-  "extends": [
-    "config:base"
-  ]
+  "dependencyDashboard": "true",
+    "major": {
+        "dependencyDashboardApproval": "true"
+    },
+    "lockFileMaintenance": {
+        "enabled": true
+    },
+    "extends": [
+      "config:base", 
+      ":switchToGradleLite",
+      "schedule:daily"]
 }
