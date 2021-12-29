@@ -1,6 +1,8 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base",
+    "local>renovate/preset:default",
+    "local>renovate/preset:groupAllNonMajor",
     ":switchToGradleLite",
     "schedule:daily"
   ]
