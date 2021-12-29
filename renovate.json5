@@ -13,8 +13,11 @@
     ],
   "regexManagers": [
      {
+      "description": "Detect kt under buildSrc",
       "fileMatch": ["buildSrc/.+/Dependencies(-test)*.kt"],
-       "matchStrings": ["[a-zA-Z]+Version = (?<currentValue>.*?)\n"],
+      "matchStrings": [
+        "val (?<depName>.*) = (?<currentValue>\d+.\d+[.\d]*)"
+      ],
       "versioningTemplate": "gradle"
       }
     ]
