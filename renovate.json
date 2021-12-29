@@ -3,16 +3,11 @@
     "major": {
         "dependencyDashboardApproval": "true"
     },
-    "git-submodules": {
-        "enabled": false
-    },
     "lockFileMaintenance": {
         "enabled": true
     },
-    "cloneSubmodules": false,
     "extends": [
       "config:base", 
-      ":preserveSemverRanges", 
       ":switchToGradleLite",
       "schedule:daily"]
 }
