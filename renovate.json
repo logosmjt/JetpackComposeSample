@@ -9,5 +9,6 @@
     "extends": [
       "config:base", 
       ":switchToGradleLite",
-      "schedule:daily"]
+      "schedule:daily"
+    ]
 }
