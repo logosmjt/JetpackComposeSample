@@ -86,9 +86,31 @@ internal fun Selector(
 @Preview(name = "Selector")
 @Composable
 internal fun SelectorPreview() {
-    JetpackComposeSampleTheme(darkTheme = false) {
+    JetpackComposeSampleTheme {
         Selector(
             "Text", false, {}
+        )
+    }
+}
+
+@ExperimentalMaterialApi
+@Preview(name = "Selector in dark")
+@Composable
+internal fun SelectorDarkPreview() {
+    JetpackComposeSampleTheme (darkTheme = true) {
+        Selector(
+            "Text", false, {}
+        )
+    }
+}
+
+@ExperimentalMaterialApi
+@Preview(name = "Selector selected in dark")
+@Composable
+internal fun SelectorSeletedDarkPreview() {
+    JetpackComposeSampleTheme (darkTheme = true) {
+        Selector(
+            "Text", true, {}
         )
     }
 }
@@ -97,9 +119,10 @@ internal fun SelectorPreview() {
 @Preview(name = "Selector is selected")
 @Composable
 internal fun SelectorSelectedPreview() {
-    JetpackComposeSampleTheme(darkTheme = false) {
+    JetpackComposeSampleTheme {
         Selector(
             "Text", true, {}
         )
     }
 }
+
