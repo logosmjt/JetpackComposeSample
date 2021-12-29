@@ -19,7 +19,8 @@
         "^[A-Za-z]+Version = (?<currentValue>.*?)\n"
       ],
       "datasourceTemplate": "maven",
-      "versioningTemplate": "gradle"
+      "versioningTemplate": "gradle",
+      "depNameTemplate": "coil"
       }
     ]
 }
