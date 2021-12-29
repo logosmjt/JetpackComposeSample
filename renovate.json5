@@ -16,7 +16,7 @@
       "description": "Detect kt under buildSrc",
       "fileMatch": ["buildSrc/.+/Dependencies(-test)*.kt"],
       "matchStrings": [
-        "(?<depName>[a-z.-]*:[a-z-]*):(?<currentValue>\d+.\d+[.\d]*)"
+        "^[A-Za-z]+Version = (?<currentValue>.*?)\n"
       ],
       "datasourceTemplate": "maven",
       "versioningTemplate": "gradle"
