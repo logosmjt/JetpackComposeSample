@@ -16,7 +16,7 @@
       "description": "Detect kt under buildSrc",
       "fileMatch": ["buildSrc/.+/Dependencies(-test)*.kt"],
       "matchStrings": [
-        "val (?<depName>.*) = (?<currentValue>\d+.\d+[.\d]*)"
+        "(?<depName>[a-z.-]*:[a-z-]*):(?<currentValue>\d+.\d+[.\d]*)"
       ],
       "versioningTemplate": "gradle"
       }
