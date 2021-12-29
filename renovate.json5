@@ -14,6 +14,7 @@
   "regexManagers": [
      {
       "fileMatch": ["buildSrc/.+/Dependencies(-test)*.kt"],
+       "matchStrings": ["[a-zA-Z]+Version = (?<currentValue>.*?)\n"],
       "versioningTemplate": "gradle"
       }
     ]
