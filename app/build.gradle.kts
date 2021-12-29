@@ -63,8 +63,8 @@ dependencies {
     implementation( "com.google.accompanist:accompanist-pager-indicators:${LibraryVersions.accompanistVersion}")
 
     //coil
-    implementation( "io.coil-kt:coil:${LibraryVersions.coilVersion}")
-    implementation( "io.coil-kt:coil-compose:${LibraryVersions.coilVersion}")
+    implementation( LibraryVersions.coil)
+    implementation( LibraryVersions.coilCompose)
     implementation( "io.coil-kt:coil-gif:${LibraryVersions.coilVersion}")
 
     // architecture components
