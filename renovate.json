@@ -20,6 +20,6 @@
       ],
       "datasourceTemplate": "maven",
       "versioningTemplate": "gradle"
-      },
+      }
     ]
 }
