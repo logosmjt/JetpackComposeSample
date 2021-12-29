@@ -6,8 +6,6 @@ plugins {
     id 'org.jlleitschuh.gradle.ktlint'
 }
 
-apply from: '../dependencies.gradle'
-
 android {
     compileSdkVersion versions.compileSdk
     defaultConfig {
