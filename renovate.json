@@ -23,7 +23,7 @@
   ],
   "regexManagers": [
     {
-      "description": "Detect kt under buildSrc",
+      "description": "Detect coil under buildSrc",
       "fileMatch": [
         "(^|/)buildSrc/.*"
       ],
@@ -32,6 +32,16 @@
       ],
       "datasourceTemplate": "maven",
       "depNameTemplate": "io.coil-kt:coil"
+    },{
+      "description": "Detect template under buildSrc",
+      "fileMatch": [
+        "(^|/)buildSrc/.*"
+      ],
+      "matchStrings": [
+        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s([a-zA-Z]*)Version = \"(?<currentValue>.*?)\"\n"
+      ],
+      "datasourceTemplate": "maven"
     }
+    
   ]
 }
