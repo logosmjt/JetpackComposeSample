@@ -21,7 +21,7 @@
       "depNameTemplate": "io.coil-kt/coil",
        "packageRules": [
     {
-      "matchDatasources": ["docker"],
+      "matchDatasources": ["maven"],
       "registryUrls": ["https://dl.google.com/android/maven2/"]
     }
   ]
