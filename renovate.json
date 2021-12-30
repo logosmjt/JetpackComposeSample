@@ -16,7 +16,8 @@
         "maven"
       ],
       "registryUrls": [
-        "https://dl.google.com/android/maven2/"
+        "https://dl.google.com/android/maven2/",
+        "https://mvnrepository.com/"
       ]
     }
   ],
