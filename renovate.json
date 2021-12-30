@@ -15,7 +15,7 @@
       "description": "Detect kt under buildSrc",
       "fileMatch": ["(^|/)buildSrc/.*"],
       "matchStrings": [
-        "coilVersion = "(?<currentValue>.*?)"\n"
+        "coilVersion = \"(?<currentValue>.*?)\"\n"
       ],
       "datasourceTemplate": "github-tags",
       "depNameTemplate": "coil-kt/coil"
