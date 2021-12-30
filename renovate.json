@@ -18,7 +18,7 @@
         "coilVersion = \"(?<currentValue>.*?)\"\n"
       ],
       "datasourceTemplate": "maven",
-       "registryUrlTemplate": "https://mvnrepository.com/",
+       "registryUrlTemplate": "https://dl.google.com/android/maven2/",
       "depNameTemplate": "io.coil-kt/coil"
       }
     ]
