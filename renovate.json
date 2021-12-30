@@ -17,7 +17,8 @@
       ],
       "registryUrls": [
         "https://dl.google.com/android/maven2/",
-        "https://mvnrepository.com/"
+        "https://mvnrepository.com/",
+        "https://jcenter.bintray.com/"
       ]
     }
   ],
