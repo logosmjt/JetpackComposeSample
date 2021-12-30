@@ -17,7 +17,7 @@
       "matchStrings": [
         "coilVersion = (?<currentValue>.*?)\n"
       ],
-      "datasourceTemplate": "GitHub",
+      "datasourceTemplate": "github-tags",
       "depNameTemplate": "coil-kt/coil"
       }
     ]
