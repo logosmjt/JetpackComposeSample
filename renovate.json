@@ -18,8 +18,13 @@
         "coilVersion = \"(?<currentValue>.*?)\"\n"
       ],
       "datasourceTemplate": "maven",
-       "registryUrlTemplate": "https://dl.google.com/android/maven2/",
-      "depNameTemplate": "io.coil-kt/coil"
+      "depNameTemplate": "io.coil-kt/coil",
+       "packageRules": [
+    {
+      "matchDatasources": ["docker"],
+      "registryUrls": ["https://dl.google.com/android/maven2/"]
+    }
+  ]
       }
     ]
 }
