@@ -16,10 +16,9 @@
       "description": "Detect kt under buildSrc",
       "fileMatch": ["buildSrc/.+/Dependencies(-test)*.kt"],
       "matchStrings": [
-        "coil = (?<currentValue>.*?)\n"
+        "coilVersion = (?<currentValue>.*?)\n"
       ],
-      "datasourceTemplate": "maven",
-      "versioningTemplate": "gradle",
+      "datasourceTemplate": "io.coil-kt",
       "depNameTemplate": "coil"
       }
     ]
