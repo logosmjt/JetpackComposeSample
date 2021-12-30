@@ -9,16 +9,5 @@
     "extends": [
       "config:base", 
       ":switchToGradleLite"
-    ],
-  "regexManagers": [
-     {
-      "description": "Detect kt under buildSrc",
-      "fileMatch": ["(^|/)buildSrc/.*"],
-      "matchStrings": [
-        "coilVersion = \"(?<currentValue>.*?)\"\n"
-      ],
-      "datasourceTemplate": "github-tags",
-      "depNameTemplate": "coil-kt/coil"
-      }
     ]
 }
