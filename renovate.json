@@ -18,8 +18,8 @@
       "matchStrings": [
         "coilVersion = (?<currentValue>.*?)\n"
       ],
-      "datasourceTemplate": "io.coil-kt",
-      "depNameTemplate": "coil"
+      "datasourceTemplate": "maven",
+      "depNameTemplate": "io.coil-kt:coil"
       }
     ]
 }
