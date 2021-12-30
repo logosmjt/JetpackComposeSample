@@ -1,5 +1,25 @@
 {
-  "extends": [
-    "config:base"
-  ]
+  "dependencyDashboard": "true",
+    "major": {
+        "dependencyDashboardApproval": "true"
+    },
+    "lockFileMaintenance": {
+        "enabled": true
+    },
+    "extends": [
+      "config:base", 
+      ":switchToGradleLite",
+      "schedule:daily"
+    ],
+  "regexManagers": [
+     {
+      "description": "Detect kt under buildSrc",
+      "fileMatch": ["buildSrc/.+/Dependencies(-test)*.kt"],
+      "matchStrings": [
+        "coilVersion = (?<currentValue>.*?)\n"
+      ],
+      "datasourceTemplate": "io.coil-kt",
+      "depNameTemplate": "coil"
+      }
+    ]
 }
