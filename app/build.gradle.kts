@@ -65,7 +65,7 @@ dependencies {
     //coil
     implementation(LibraryVersions.coil)
     implementation( LibraryVersions.coilCompose)
-    implementation( "io.coil-kt:coil-gif:${LibraryVersions.coilVersion}")
+    implementation( LibraryVersions.coilGif)
 
     // architecture components
     implementation( "androidx.fragment:fragment-ktx:${LibraryVersions.fragmentVersion}")

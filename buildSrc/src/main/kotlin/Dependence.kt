@@ -23,6 +23,7 @@ object LibraryVersions {
     const val coilVersion = "1.3.2"
     const val coil = "io.coil-kt:coil:${coilVersion}"
     const val coilCompose = "io.coil-kt:coil-compose:${coilVersion}"
+    const val coilGif = "io.coil-kt:coil-gif:1.3.2"
 
     // architecture components
     const val fragmentVersion = "1.3.1"
