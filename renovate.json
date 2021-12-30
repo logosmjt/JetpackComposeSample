@@ -38,7 +38,7 @@
         "(^|/)buildSrc/.*"
       ],
       "matchStrings": [
-        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)\n    const val ([a-zA-Z]*)Version = \"(?<currentValue>.*?)\"\n"
+        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)\n([a-z A-Z]*)Version = \"(?<currentValue>.*?)\"\n"
       ]
     }
     
