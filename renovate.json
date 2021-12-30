@@ -38,9 +38,8 @@
         "(^|/)buildSrc/.*"
       ],
       "matchStrings": [
-        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s([a-zA-Z]*)Version = \"(?<currentValue>.*?)\"\n"
-      ],
-      "datasourceTemplate": "maven"
+        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)\n    const val ([a-zA-Z]*)Version = \"(?<currentValue>.*?)\"\n"
+      ]
     }
     
   ]
