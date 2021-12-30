@@ -23,16 +23,6 @@
   ],
   "regexManagers": [
     {
-      "description": "Detect coil under buildSrc",
-      "fileMatch": [
-        "(^|/)buildSrc/.*"
-      ],
-      "matchStrings": [
-        "coilVersion = \"(?<currentValue>.*?)\"\n"
-      ],
-      "datasourceTemplate": "maven",
-      "depNameTemplate": "io.coil-kt:coil"
-    },{
       "description": "Detect template under buildSrc",
       "fileMatch": [
         "(^|/)buildSrc/.*"
