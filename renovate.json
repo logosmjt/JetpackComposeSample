@@ -9,17 +9,6 @@
     "extends": [
       "config:base", 
       ":switchToGradleLite"
-    ]{
-  "dependencyDashboard": "true",
-    "major": {
-        "dependencyDashboardApproval": "true"
-    },
-    "lockFileMaintenance": {
-        "enabled": true
-    },
-    "extends": [
-      "config:base", 
-      ":switchToGradleLite"
     ],
   "regexManagers": [
      {
@@ -32,5 +21,4 @@
       "depNameTemplate": "coil-kt/coil"
       }
     ]
-  }
 }
