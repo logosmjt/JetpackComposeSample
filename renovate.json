@@ -14,7 +14,7 @@
   "regexManagers": [
      {
       "description": "Detect kt under buildSrc",
-      "fileMatch": ["buildSrc/.+/Dependencies(-test)*.kt"],
+      "fileMatch": ["buildSrc/.+/Dependencies(-test)*.kt","\\.gradle(\\.kts)?$"],
       "matchStrings": [
         "coilVersion = (?<currentValue>.*?)\n"
       ],
