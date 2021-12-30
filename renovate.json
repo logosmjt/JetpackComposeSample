@@ -9,5 +9,16 @@
     "extends": [
       "config:base", 
       ":switchToGradleLite"
+    ],
+  "regexManagers": [
+     {
+      "description": "Detect kt under buildSrc",
+      "fileMatch": ["(^|/)buildSrc/.*"],
+      "matchStrings": [
+        "coilVersion = \"(?<currentValue>.*?)\"\n"
+      ],
+      "datasourceTemplate": "maven",
+      "depNameTemplate": "coil-kt/coil"
+      }
     ]
 }
