@@ -17,7 +17,8 @@
       "matchStrings": [
         "coilVersion = \"(?<currentValue>.*?)\"\n"
       ],
-      "datasourceTemplate": "gradle",
+      "datasourceTemplate": "maven",
+       "registryUrlTemplate": "https://mvnrepository.com/",
       "depNameTemplate": "io.coil-kt/coil"
       }
     ]
