@@ -24,7 +24,7 @@ object LibraryVersions {
     const val accompanistVersion = "0.20.2"
 
     // renovate: datasource=maven depName=io.coil-kt:coil
-    const val coilVersion = "1.3.2"
+    const val coilVersion = "1.4.0"
     const val coil = "io.coil-kt:coil:${coilVersion}"
     const val coilCompose = "io.coil-kt:coil-compose:${coilVersion}"
     const val coilGif = "io.coil-kt:coil-gif:1.3.2"
