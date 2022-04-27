@@ -1,5 +1,6 @@
 plugins {
     id ("com.android.application")
+    id("kotlin-parcelize")
     kotlin("android") apply true
     id ("kotlin-android")
     id ("kotlin-kapt")
@@ -91,6 +92,8 @@ dependencies {
     implementation( "com.squareup.okhttp3:logging-interceptor:${LibraryVersions.okhttpVersion}")
     implementation( "com.squareup.retrofit2:converter-gson:${LibraryVersions.retrofitVersion}")
     testImplementation( "com.squareup.okhttp3:mockwebserver:${LibraryVersions.okhttpVersion}")
+
+    implementation( "org.jetbrains.kotlin:kotlin-android-extensions-runtime:${LibraryVersions.kotlinAndroidExtensionsRuntime}")
 
     // coroutines
     implementation( "org.jetbrains.kotlinx:kotlinx-coroutines-android:${LibraryVersions.coroutinesVersion}")

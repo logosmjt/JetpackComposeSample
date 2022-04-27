@@ -7,6 +7,7 @@ object LibraryVersions {
     const val gradleBuildTool = "7.0.2"
     const val spotlessGradle = "5.15.0"
     const val kotlin = "1.5.31"
+    const val kotlinAndroidExtensionsRuntime = "1.3.0"
 
     // material
     const val materialVersion = "1.3.0-alpha03"

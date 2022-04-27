@@ -1,6 +1,5 @@
 package com.jingtian.study.home
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -24,9 +23,6 @@ class HomeViewModel @Inject constructor(
 
     private val _state = MutableLiveData<HomeViewState>()
     val state = _state
-    private val _categories = MutableLiveData<List<String>>()
-    val categories: LiveData<List<String>> = _categories
-    private val recommendMap = MutableLiveData<Map<String, Category>>()
     private val pendingActions = MutableSharedFlow<HomeAction>()
 
     init {
@@ -34,7 +30,9 @@ class HomeViewModel @Inject constructor(
             fetchRecommends()
             pendingActions.collect {
                 when (it) {
-                    is HomeAction.CategorySelected -> onCategorySelected(it.category)
+                    is HomeAction.CategorySelected -> _state.value = onCategorySelected(it.category)
+                    else -> {
+                    }
                 }
             }
         }
@@ -54,27 +52,19 @@ class HomeViewModel @Inject constructor(
             .collect { _state.value = it }
     }
 
-    private fun onCategorySelected(category: String) {
-        _state.value = if (recommendMap.value?.get(category) != null) {
-            HomeViewState.Result(
-                recommendMap.value?.get(category)!!
-            )
-        } else {
-            HomeViewState.Error
-        }
-    }
+
+    private fun onCategorySelected(category: String): HomeViewState =
+        (_state.value as? HomeViewState.Result)?.copy(category = category) ?: HomeViewState.Error
 
     private fun Recommend.toHomeViewState(): HomeViewState {
         if (this.list.isEmpty())
             return HomeViewState.Error
-        val remoteCategories: MutableList<String> = mutableListOf()
+        val remoteCategoryList: MutableList<String> = mutableListOf()
         val remoteRecommendMap: MutableMap<String, Category> = mutableMapOf()
         this.list.forEach { category ->
-            remoteCategories.add(category.name)
+            remoteCategoryList.add(category.name)
             remoteRecommendMap[category.name] = category
         }
-        _categories.value = remoteCategories
-        recommendMap.value = remoteRecommendMap
-        return HomeViewState.Result(this.list[0])
+        return HomeViewState.Result(list[0].name, remoteCategoryList, remoteRecommendMap)
     }
 }

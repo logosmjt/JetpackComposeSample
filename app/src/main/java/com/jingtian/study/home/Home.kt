@@ -5,8 +5,10 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.livedata.observeAsState
 import androidx.compose.ui.Modifier
 import com.google.accompanist.pager.ExperimentalPagerApi
@@ -37,6 +39,7 @@ internal fun HomeScreen(viewModel: HomeViewModel) {
     }
 }
 
+
 @ExperimentalPagerApi
 @ExperimentalMaterialApi
 @Composable
@@ -44,7 +47,8 @@ internal fun HomeContent(
     state: HomeViewState.Result,
     viewModel: HomeViewModel,
 ) {
-    val categories = viewModel.categories.observeAsState().value ?: listOf()
+    val categories = state.categoryList
+    val category = state.recommendMap[state.category]
 
     LazyColumn(
         contentPadding = PaddingValues(top = Medial, bottom = Medial),
@@ -54,11 +58,12 @@ internal fun HomeContent(
         item {
             Selectors(
                 selectors = categories,
-                current = state.category.name,
+                current = state.category,
                 onSelected = { viewModel.submitAction(HomeAction.CategorySelected(it)) }
             )
         }
-        state.category.list.let { it ->
+
+        category?.list?.let {
             items(it) { item ->
                 when (item) {
                     is HomeItem.Banners -> {
