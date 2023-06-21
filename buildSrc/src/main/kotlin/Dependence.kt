@@ -14,7 +14,7 @@ object LibraryVersions {
     // compose
     // renovate: datasource=maven depName=androidx.compose.ui:ui
     const val composeVersion = "1.1.0-beta02"
-    const val constraintVersion = "1.0.0-alpha07"
+    const val constraintVersion = "1.0.1"
     // renovate: datasource=maven depName=androidx.activity:activity-compose
     const val activityVersion = "1.3.0-rc02"
     // renovate: datasource=maven depName=androidx.navigation:navigation-compose
