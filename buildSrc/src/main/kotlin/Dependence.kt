@@ -18,7 +18,7 @@ object LibraryVersions {
     // renovate: datasource=maven depName=androidx.activity:activity-compose
     const val activityVersion = "1.3.0-rc02"
     // renovate: datasource=maven depName=androidx.navigation:navigation-compose
-    const val composeNavVersion = "2.4.0-alpha05"
+    const val composeNavVersion = "2.7.6"
 
     // accompanist
     const val accompanistVersion = "0.20.2"
