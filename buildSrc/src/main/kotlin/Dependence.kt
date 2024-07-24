@@ -38,7 +38,7 @@ object LibraryVersions {
     // di
     const val hiltCoreVersion = "2.39.1"
     const val hiltVersion = "1.0.0"
-    const val hiltComposeNavigation = "1.0.0-alpha03"
+    const val hiltComposeNavigation = "1.2.0"
 
     // network
     const val retrofitVersion = "2.9.0"
