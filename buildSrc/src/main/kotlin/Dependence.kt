@@ -13,7 +13,7 @@ object LibraryVersions {
 
     // compose
     // renovate: datasource=maven depName=androidx.compose.ui:ui
-    const val composeVersion = "1.1.0-beta02"
+    const val composeVersion = "1.7.4"
     const val constraintVersion = "1.0.0-alpha07"
     // renovate: datasource=maven depName=androidx.activity:activity-compose
     const val activityVersion = "1.3.0-rc02"
